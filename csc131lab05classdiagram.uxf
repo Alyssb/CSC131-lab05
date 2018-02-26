@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>30</y>
+      <w>350</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Thing&gt;&gt;
+csc131::GeometricObject
+--
+-_color: str
+-_filled: bool
+--
++ __init__(self, color: str = "white", filled: bool = True)
++ get_color(self): str
++ set_color(self, color: str): None
++ is_filled(self): bool
+* set_filled(self, filled: bool): None
++ __str__(self): str
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>410</y>
+      <w>460</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Thing&gt;&gt;
+csc131::Circle
+--
+-_radius: float
+--
++ __init__(self radius: float = 1.0, color: str = "white", filled: bool = True)
++ get_area(self): float
++ get_perimeter(self): float
++ __str__(self): str
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>410</y>
+      <w>670</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Thing&gt;&gt;
+csc131::Triangle
+--
+-_side1: float
+-_side2: float
+-_side2: float
+--
++ __init__(self, side1: float = 1.0, side2: float = 1.0, side3: float = 1.0, color: str = "white", filled: bool = True)
++ get_area(self): float
++ get_perimeter(self): float
++ __str__(self): str
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>210</y>
+      <w>210</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>210</y>
+      <w>220</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;200.0</additional_attributes>
+  </element>
+</diagram>
