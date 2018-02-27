@@ -6,7 +6,7 @@ Lab 5: Geometric Object
 File: Circle.py
 Author: Alyssa Slayton <ajs41@missouristate.edu>
 """
-from csc131 import GeometricObject
+from csc131.GeometricObject import GeometricObject
 from math import pi
 
 # TODO: Replace this TODO with the Circle definition prescribed in the README.
@@ -16,8 +16,11 @@ class Circle(GeometricObject):
         super().__init__(color,filled)
         self._radius = radius
 
-    def get_area(radius: float) -> float:
-        return pi*(radius**2)
+    def __str__(self):
+        return "Circle: radius = {} {}".format(self._radius, super().__str__())
 
-    def get_perimeter(radius: float) -> float:
-        return pi*2*radius
+    def get_area(self) -> float:
+        return pi*(self._radius**2)
+
+    def get_perimeter(self) -> float:
+        return pi*2*self._radius
