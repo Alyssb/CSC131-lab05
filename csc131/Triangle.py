@@ -12,7 +12,8 @@ from math import sqrt
 # TODO: Replace this TODO with the Triangle definition prescribed in the README.
 class Triangle(GeometricObject):
 
-    def __init__(self, side1: float = 1.0, side2: float = 1.0, side3: float = 1.0, color: str = "white", filled: bool=True):
+    def __init__(self, side1: float = 1.0, side2: float = 1.0, side3: float = 1.0,
+                 color: str = "white", filled: bool=True):
         super().__init__(color,filled)
         self._side1 = side1
         self._side2 = side2
@@ -24,3 +25,7 @@ class Triangle(GeometricObject):
 
     def get_perimeter(self) -> float:
         return self._side1 + self._side2 + self._side3
+
+    def __str__(self):
+        return "Triangle: side1 = {} side2 = {} side3 = {} {}".format(self._side1, self._side2,
+                                                                      self._side3, super().__str__())
