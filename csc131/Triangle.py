@@ -19,5 +19,5 @@ class Triangle(GeometricObject):
         self._side3 = side3
 
     def get_area(self) -> float:
-        s = (self._side1 + self._side2 + self._side3)
-        return sqrt(s(s - self._side1)(s - self._side2)(s - self._side3))
+        s = (self._side1 + self._side2 + self._side3) / 2
+        return sqrt(s * (s - self._side1) * (s - self._side2) * (s - self._side3))
